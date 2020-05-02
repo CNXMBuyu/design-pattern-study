@@ -1,6 +1,7 @@
-package cn.hgy.factory;
+package cn.hgy.di.parser;
 
-import java.io.InputStream;
+import cn.hgy.di.BeanDefinition;
+
 import java.util.List;
 
 /**

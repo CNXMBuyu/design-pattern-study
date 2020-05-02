@@ -1,4 +1,6 @@
-package cn.hgy.factory;
+package cn.hgy.di;
+
+import cn.hgy.di.parser.ClassPathXmlApplicationContext;
 
 /**
  * @author guoyu.huang
@@ -14,4 +16,5 @@ public class Demo {
         Class2 class2 = (Class2)applicationContext.getBean("class2");
         class2.show();
     }
+
 }

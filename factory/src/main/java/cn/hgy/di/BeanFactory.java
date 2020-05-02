@@ -1,4 +1,4 @@
-package cn.hgy.factory;
+package cn.hgy.di;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
@@ -15,19 +15,24 @@ public class BeanFactory {
 
     public Object getBean(String beanId) {
         Object object = singletonObjects.get(beanId);
-        if(object == null){
+        if (object == null) {
             BeanDefinition beanDefinition = beanDefinitions.get(beanId);
-            if(beanDefinition == null){
+            if (beanDefinition == null) {
                 throw new RuntimeException("Bean is not defined: " + beanId);
-            }else{
+            } else {
                 object = create(beanDefinition);
             }
         }
         return object;
     }
 
+    /**
+     * 加载BeanDefinition，缓存所有的BeanDefinition以及单例对象
+     *
+     * @param beanDefinitionList
+     */
     public void loadBeanDefinitions(List<BeanDefinition> beanDefinitionList) {
-       beanDefinitionList.forEach(beanDefinition -> {
+        beanDefinitionList.forEach(beanDefinition -> {
             beanDefinitions.putIfAbsent(beanDefinition.getId(), beanDefinition);
         });
         beanDefinitionList.forEach(beanDefinition -> {
@@ -37,6 +42,12 @@ public class BeanFactory {
         });
     }
 
+    /**
+     * 通过反射，创建具体对象
+     *
+     * @param beanDefinition
+     * @return
+     */
     public Object create(BeanDefinition beanDefinition) {
 
         if (beanDefinition.isSingleton() && singletonObjects.contains(beanDefinition.getId())) {

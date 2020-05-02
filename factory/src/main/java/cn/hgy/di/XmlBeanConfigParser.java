@@ -1,5 +1,6 @@
-package cn.hgy.factory;
+package cn.hgy.di;
 
+import cn.hgy.di.parser.BeanConfigParser;
 import org.w3c.dom.*;
 
 import javax.xml.parsers.DocumentBuilder;

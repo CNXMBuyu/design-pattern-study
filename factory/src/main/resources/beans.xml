@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <beans>
-    <bean id="class1" class="cn.hgy.factory.Class1">
+    <bean id="class1" class="cn.hgy.di.Class1">
         <constructor-arg ref="class2"/>
     </bean>
-    <bean id="class2" class="cn.hgy.factory.Class2" scope="SINGLETON" lazy-init="true">
+    <bean id="class2" class="cn.hgy.di.Class2" scope="SINGLETON" lazy-init="true">
         <constructor-ar type="java.lang.String" value="a"/>
         <constructor-arg type="java.lang.String" value="b"/>
     </bean>

@@ -1,9 +1,11 @@
-package cn.hgy.factory;
+package cn.hgy.di;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * Bean的定义
+ *
  * @author guoyu.huang
  * @version 1.0.0
  */
@@ -55,7 +57,7 @@ public class BeanDefinition {
         this.constructorArgs = constructorArgs;
     }
 
-    public boolean isSingleton(){
+    public boolean isSingleton() {
         return Scope.SINGLETON.equals(this.scope);
     }
 
@@ -90,7 +92,7 @@ public class BeanDefinition {
             this.ref = ref;
         }
 
-        public boolean isRef(){
+        public boolean isRef() {
             return this.ref != null;
         }
     }

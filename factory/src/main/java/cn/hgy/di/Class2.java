@@ -1,4 +1,4 @@
-package cn.hgy.factory;
+package cn.hgy.di;
 
 /**
  * @author guoyu.huang
