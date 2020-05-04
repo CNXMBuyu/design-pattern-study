@@ -1,4 +1,4 @@
-package cn.hgy.proxy;
+package cn.hgy.decorator;
 
 /**
  * @author guoyu.huang

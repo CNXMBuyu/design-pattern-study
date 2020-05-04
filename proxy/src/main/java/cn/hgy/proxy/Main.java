@@ -8,9 +8,9 @@ public class Main {
 
     public static void main(String[] args) {
         IBusinessService businessServiceProxy = new BusinessServiceProxy();
-        businessServiceProxy.invoke2();
+        businessServiceProxy.invoke();
 
-        IBusinessService businessService = (IBusinessService) new BusinessServiceDynamicProxy().createProxy(new BusinessService());
-        businessService.invoke2();
+        IBusinessService businessService = (IBusinessService) new DynamicProxy().createProxy(new BusinessService());
+        businessService.invoke();
     }
 }
