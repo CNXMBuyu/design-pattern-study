@@ -1,8 +1,4 @@
-package cn.hgy.observer.demo;
-
-import cn.hgy.observer.EventBus;
-import cn.hgy.observer.EventBusAsync;
-import cn.hgy.observer.ObserverRegistry;
+package cn.hgy.observer.eventbus;
 
 /**
  * @author guoyu.huang

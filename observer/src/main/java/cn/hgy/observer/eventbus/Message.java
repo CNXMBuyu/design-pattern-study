@@ -1,4 +1,4 @@
-package cn.hgy.observer.demo;
+package cn.hgy.observer.eventbus;
 
 /**
  * @author guoyu.huang

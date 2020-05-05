@@ -1,6 +1,4 @@
-package cn.hgy.observer.demo;
-
-import cn.hgy.observer.Subscribe;
+package cn.hgy.observer.eventbus;
 
 /**
  * @author guoyu.huang

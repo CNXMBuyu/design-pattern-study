@@ -1,4 +1,4 @@
-package cn.hgy.observer;
+package cn.hgy.observer.eventbus;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
