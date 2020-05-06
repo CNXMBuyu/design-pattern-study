@@ -23,6 +23,7 @@
         <module>prototype</module>
         <module>decorator</module>
         <module>adapter</module>
+        <module>chain</module>
     </modules>
 
     <dependencies>
