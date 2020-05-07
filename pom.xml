@@ -24,6 +24,7 @@
         <module>decorator</module>
         <module>adapter</module>
         <module>chain</module>
+        <module>visitor</module>
     </modules>
 
     <dependencies>
