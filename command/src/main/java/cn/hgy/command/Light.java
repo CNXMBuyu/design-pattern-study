@@ -8,10 +8,11 @@ package cn.hgy.command;
  */
 public class Light {
 
-    /**
-     * 开启方法
-     */
     public void on() {
         System.out.println("灯亮了");
+    }
+
+    public void off() {
+        System.out.println("灯暗了");
     }
 }
