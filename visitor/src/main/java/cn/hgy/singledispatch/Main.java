@@ -6,23 +6,15 @@ package cn.hgy.singledispatch;
  */
 public class Main {
 
-    public void show(Parent parent){
-        parent.show();
-    }
-
-    public void showA(Parent parent){
-        System.out.println(" showParent ");
-    }
-
-    public void showA(Children children){
-        System.out.println(" showChildren ");
-    }
-
     public static void main(String[] args) {
-        Main main = new Main();
-        Parent parent = new Children();
-        main.show(parent);
-        main.showA(parent);
-    }
+        Parent parent = new Parent();
+        Parent parentChildren = new Children();
+        Children children = new Children();
 
+        // 思考下，编译器会定义几个方法？
+        parent.show(parentChildren);
+        parentChildren.show(parent);
+        parentChildren.show(children);
+        children.show(parent);
+    }
 }

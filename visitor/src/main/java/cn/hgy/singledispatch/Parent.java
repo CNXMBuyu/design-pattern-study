@@ -6,7 +6,11 @@ package cn.hgy.singledispatch;
  */
 public class Parent {
 
-    public void show(){
-        System.out.println("this is parent");
+    public void show(Parent parent){
+        System.out.println("Parent.show(Parent)");
+    }
+
+    public void show(Children children){
+        System.out.println("Parent.show(Children)");
     }
 }

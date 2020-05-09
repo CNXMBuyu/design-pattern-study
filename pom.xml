@@ -25,6 +25,7 @@
         <module>adapter</module>
         <module>chain</module>
         <module>visitor</module>
+        <module>mediator</module>
     </modules>
 
     <dependencies>
